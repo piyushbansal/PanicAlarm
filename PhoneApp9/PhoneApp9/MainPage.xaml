@@ -1,0 +1,51 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp9.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,9,0,40">
+            <TextBlock x:Name="Title" Text="PANIC ALARM" Margin="9,-8,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,4,12,-4">
+            <Ellipse x:Name="Panic_Button" HorizontalAlignment="Left" Margin="113,0,0,29" Width="222" Height="212" VerticalAlignment="Bottom" Opacity="0.8" Tap="enterPanicMode">
+                <Ellipse.Projection>
+                    <PlaneProjection CenterOfRotationX="0" CenterOfRotationY="0" RotationX="15"/>
+                </Ellipse.Projection>
+                <Ellipse.Fill>
+                    <SolidColorBrush Color="#99F30A0A"/>
+                </Ellipse.Fill>
+                <Ellipse.Stroke>
+                    <ImageBrush Stretch="Fill"/>
+                </Ellipse.Stroke>
+            </Ellipse>
+            <Grid Margin="89,-15,77,297">
+                <Button x:Name="Hospitals" Content="Hospitals" HorizontalAlignment="Right" Margin="0,0,145,174" VerticalAlignment="Bottom" Height="169" Width="145" FontSize="20" Click="click_hos"/>
+                <Button x:Name="Important_Contacts" Content="Important&#xA;Contacts" HorizontalAlignment="Left" Margin="145,175,0,0" VerticalAlignment="Top" Height="169" Width="145" FontSize="20"/>
+                <Button x:Name="Police_Stations" Content="Police&#xA;Stations" HorizontalAlignment="Left" Margin="145,6,0,0" VerticalAlignment="Top" Height="169" Width="145" FontSize="20" Click="click_pol"/>
+                <Button x:Name="Pharmacy" Content="Pharmacy" HorizontalAlignment="Left" Margin="0,175,0,0" VerticalAlignment="Top" Height="169" Width="145" FontSize="20" Click="click_phar"/>
+            </Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="158,458,0,0" TextWrapping="Wrap" Text="Tap for Panic Mode" VerticalAlignment="Top" Height="105" Width="135" Tap="enterPanicMode" TextAlignment="Center"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

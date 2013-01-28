@@ -1,0 +1,7 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="PhoneApp9" EntryPointType="PhoneApp9.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="PhoneApp9" Source="PhoneApp9.dll" />
+    <AssemblyPart x:Name="Facebook" Source="Facebook.dll" />
+    <AssemblyPart x:Name="sdkMapControlWP8CS" Source="sdkMapControlWP8CS.dll" />
+  </Deployment.Parts>
+</Deployment>

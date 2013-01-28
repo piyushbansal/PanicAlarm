@@ -1,0 +1,39 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="PhoneApp9.chooseEmergency"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="App_Name" Text="PANIC ALARM" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="Page_Name" Text="Select Emergency?" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="56"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<Button x:Name="Accident" Content="Accident" HorizontalAlignment="Left" Margin="64,68,0,0" VerticalAlignment="Top" Height="96" Width="331" Tag="accident" Tap="enterEmergency" Click="enterEmergency"/>
+        	<Button x:Name="Physical_assault" Content="Physical Assault" HorizontalAlignment="Left" Margin="64,184,0,0" VerticalAlignment="Top" Height="96" Width="331" Tag="physical_assault" Click="enterEmergency"/>
+        	<Button x:Name="Medical" Content="Medical" HorizontalAlignment="Left" Margin="64,303,0,0" VerticalAlignment="Top" Height="96" Width="331" Tag="medical" Click="enterEmergency"/>
+        	<Button x:Name="Other_emergency_Copy" Content="Other Emergencies" HorizontalAlignment="Left" Margin="64,421,0,0" VerticalAlignment="Top" Height="96" Width="331" Tag="emergency" Click="enterEmergency"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
